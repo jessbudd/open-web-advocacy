@@ -12,11 +12,11 @@ If you're comfortable with code, please follow the instructions below. If you're
 
 New languages require a a minimum base of all the global website content. This includes things like banners, header, footer and navigation.  
 
-Files to include in your PR:
+Minimum files to include in your PR:
 - `_data/navigation.json`
 - `_data/languages_base.json`
 
-The new language object in these files must include all properties on the `en` object. The "direction" property can be an empty string, "ltr" (default) or "rtl" (for right to left languages). 
+The new language object in these files must include all properties on the `en` object. The "direction" property can be an empty string, "ltr" (empty string defaults to this) or "rtl" (for right to left languages). 
 
 The object key should match the [ISO language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes).
 
@@ -32,7 +32,7 @@ Copy the page and paste into the relevant language folder.
 
 The file name of the new language page must be identical to the english version. 
 
-Translate the new page file and raise a pull request!
+Translate the new page file and raise a pull request :tada:
 
 
 ### Guidelines
