@@ -32,7 +32,12 @@ Copy the page and paste into the relevant language folder.
 
 The file name of the new language page must be identical to the english version. 
 
-Translate the new page file and raise a pull request :tada:
+Translate the new page, including the front matter title and meta description. 
+
+The permalink front matter should be updated to include the language code as a parent folder. For example `permalink: '/get-involved/'` becomes `permalink: /es/get-involved/`.
+
+
+Raise a pull request :tada:
 
 
 ### Guidelines
