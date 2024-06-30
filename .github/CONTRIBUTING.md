@@ -36,7 +36,6 @@ Translate the new page, including the front matter title and meta description.
 
 The permalink front matter should be updated to include the language code as a parent folder. For example `permalink: '/get-involved/'` becomes `permalink: /es/get-involved/`.
 
-
 Raise a pull request :tada:
 
 
@@ -45,5 +44,6 @@ Raise a pull request :tada:
 A few questions you may have when translating:
 
 - "Open Web Advocacy" should be treated as a proper noun and remain in English.
+- Hashtags and social media platform names should be treated as proper nouns and remain in English.
 - If the translated language has a formal and informal option, err on the side of direct and informal. For example in Spanish, this would be using the term "tú" instead of "usted". 
 When not sure, check out what similiar organisations like Wikipedia, Greenpeace and Mozilla do. Or feel free to reach out to us on [Discord](https://discord.gg/x53hkqrRKx).
