@@ -10,34 +10,43 @@ If you're comfortable with code, please follow the instructions below. If you're
 
 ### Adding a new language
 
-New languages require translation of the global website content at a minimum. This includes things like banners, header, footer and navigation.  
+#### 1. Add language folder and base pages
+From the root project directory, run `node generate-language-files.js {newLanguageCode}`. The new language code should match the [ISO language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes). 
 
-Minimum files to include in your PR:
+This script will:
+- create a new folder with the language code as the name
+- create a copy of each page located in `src/pages` into the new language folder
+- update the page permalinks to prepend the language code
+- add `translated: false` to the page's front matter
+
+
+#### 2. Translate global content
+
+Global content is located in two files:
 - `_data/navigation.json`
 - `_data/languages_base.json`
 
-The new language object in these files must include all properties on the `en` object.
+Update both files above with the new language translations. 
 
-The object key should match the [ISO language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes).
+The object keys should match the [ISO language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes).
+
+The new language object in the data files must include all properties on the `en` object.
 
 The url of navigation links should remain in english.
 
-### Adding a translated page
 
-If the language has no existing translated pages, please ensure the language has been added to the global files (see above). Translated pages should live in a folder with the [language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) as the name. For example `/src/es/` for Spanish translated pages.
+#### 3. Translate pages
+Translate the copied version of the homepage, and any additional pages you would like, into the new language.
 
-Find the page you want to translate in the `src/pages` directory. This could be html or markdown. 
+### Translating pages from existing language
 
-Copy the page and paste into the relevant language folder. 
+Each language has a folder corresponding with its [ISO language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes). 
 
-The file name of the new language page must be identical to the english version. 
+Files in this folder that are currently in English can be edited directly. 
 
-Translate the new page, including the front matter title and meta description. 
-
-The permalink front matter should be updated to include the language code as a parent folder. For example `permalink: '/get-involved/'` becomes `permalink: /es/get-involved/`.
+Once the page is translated, (including the front matter title and meta description), please update the `translated` front matter from `false` to `true`. This will remove the "not yet translated" banner from the page.
 
 Raise a pull request :tada:
-
 
 ### Guidelines
 
