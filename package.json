@@ -10,6 +10,7 @@
     "start": "npx @11ty/eleventy --serve --quiet",
     "build": "npm run production",
     "production": "NODE_ENV=production npx @11ty/eleventy",
+    "copy-files": "node generate-language-files.js",
     "updates": "npx npm-check-updates -i --format group"
   },
   "engines": {
